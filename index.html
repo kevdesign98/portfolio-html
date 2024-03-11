@@ -1,22 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
     <!-- Remember to include jQuery :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <title>Portfolio</title>
 </head>
+
 <body>
-    
-    
+    <header>
+        <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+        <nav class="navbar navbar-expand-lg py-3" aria-label="Main">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/img/logo-boost.svg" alt="Boost Theme">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <div class="navbar-nav my-3 my-lg-0 ms-auto">
+                        <a class="nav-link px-lg-3" href="/pages">Home</a>
+                        <a class="nav-link px-lg-3" href="#works">Works</a>
+                        <a class="nav-link px-lg-3" href="/docs/intro">Contact</a>
+                    </div>
+                    <a class="btn btn-primary btn-sm rounded-pill ms-lg-3"
+                        href="https://themes.getbootstrap.com/product/boost/">Buy now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container pad-t">
+        <div class="row align-items-lg-center">
+            <div class="col-lg text-center text-lg-start">
+                <h1 class="display-4 mb-4 fw-semibold">Hi, Im Kevin Cooray<br>
+                    A Web Designer <br>
+                    based in Tuscany.</h1>
+                <div
+                    class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-start gap-3">
+                    <a class="btn btn-primary rounded-pill fw-semibold" href="/pages">Download CV</a>
+                </div>
+            </div>
+            <div class="col-lg">
+                <img src="img/kev-circle.png" class="img-fluid d-none d-lg-block w-50" style="margin: 0 auto;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid nopad">
+        <p class="nospace">
+            <svg id="bkg-01-svg" data-name="bkg-01-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1306.31 68.56">
+                <defs>
+                    <style>
+                        .b1e04ae8-6fb5-4eba-852a-a50e79133cd5 {
+                            fill: #202020;
+                        }
+
+                        .a1d30898-0f58-4430-aeb3-b2b9077948fd {
+                            fill: #ebebeb;
+                        }
+                    </style>
+                </defs>
+                <rect class="b1e04ae8-6fb5-4eba-852a-a50e79133cd5" y="-1.07" width="1305.31" height="66.97"
+                    transform="translate(1306.31 67.49) rotate(-180)"></rect>
+                <path class="a1d30898-0f58-4430-aeb3-b2b9077948fd"
+                    d="M-1,48.91S319.34-18,648.1,31.56s655.84,3.72,655.84,3.72V-2.66H-1Z"
+                    transform="translate(0.99 2.66)"></path>
+            </svg>
+        </p>
+    </div>
+
+    <section id="works" class="bg-darkl dcenter pad-t-10">
+        <div class="col-lg-6 col-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-5">
+                        <h1 class="text-white" style="margin-bottom: 30px;">Explore my <br> projects and works</h1>
+                        <img src="img/romiti.png" alt="img" class="rounded-4 img-fluid mb-5 w-100">
+                        <div class="card-img-overlay">
+                            <h1 class="dcenter">romiti</h1>
+                        </div>
+                        <img src="img/eidos-ff.png" alt="img" class="rounded-4 img-fluid mb-5 mb-md-0">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <img src="img/eidos-foc.png" alt="img" class="rounded-4 img-fluid mb-5">
+                        <img src="img/rifugio.png" alt="img" class="rounded-4 img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
 </body>
+
 </html>
