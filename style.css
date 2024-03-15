@@ -87,6 +87,30 @@ a {
   background-position: 50% 50%;
 }
 
+.bg-foc{
+  background-image: url("img/test.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right;
+}
+
+.bg-ff{
+  background-image: url("img/Eidos-FF-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+.bg-rifugio{
+  background-image: url("img/rifugio-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
 .nospace {
   margin-bottom: 0px;
   overflow: hidden !important;
@@ -297,16 +321,17 @@ a {
 .next-work-ff .next-work-ff-arrow svg {
   width: 150px;
   height: 70px;
+  fill: white;
 }
 .next-work-ff .next-work-arrow-ff svg path {
-  fill: #fff;
+  fill: #fff !important;
   transition: all 0.3s ease;
 }
 .next-work-ff:focus .next-work-ff-lead,
 .next-work-ff:focus .next-work-ff-title,
 .next-work-ff:hover .next-work-ff-lead,
 .next-work-ff:hover .next-work-ff-title {
-  color: #fff;
+  color: #ffffff;
 }
 .next-work-ff:focus:after,
 .next-work-ff:focus:before,
@@ -323,5 +348,113 @@ a {
 }
 .next-work-ff:focus .next-work-ff-arrow svg path,
 .next-work-ff:hover .next-work-ff-arrow svg path {
-  fill: #fff;
+  fill: #ffffff !important;
+}
+
+/* rifugio */
+
+.next-work-rifugio {
+  display: block;
+  width: 100%;
+  padding: 45px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #202020;
+}
+.next-work-rifugio .content {
+  position: relative;
+  z-index: 20;
+}
+.next-work-rifugio:after,
+.next-work-rifugio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  transition: -webkit-transform 0.38s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.38s cubic-bezier(0.694, 0.048, 0.335, 1);
+  /*! transition:transform .38s cubic-bezier(.694,.048,.335,1),-webkit-transform .38s cubic-bezier(.694,.048,.335,1); */
+  -webkit-transform: translateY(-100%);
+  /*! transform:translateY(-100%) */
+}
+.next-work-rifugio:before {
+  background-color: #FF5051;
+  transition-delay: 0.12s;
+  z-index: 2;
+}
+.next-work-rifugio:after {
+  background-color: #FF8630;
+  z-index: 1;
+}
+.next-work-rifugio .next-work-rifugio-lead,
+.next-work-rifugio .next-work-rifugio-title {
+  transition: color 0.4s ease 0.25s;
+}
+ 
+.next-work-rifugio .next-work-rifugio-title {
+  display: inline-block;
+  position: relative;
+}
+.next-work-rifugio .next-work-rifugio-title:after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FF5051;
+  z-index: -1;
+}
+.next-work-rifugio .next-work-rifugio-arrow {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 100px;
+  top: 65%;
+  width: 150px;
+  height: 70px;
+  opacity: 0.7;
+  transition: -webkit-transform 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.25s cubic-bezier(0.694, 0.048, 0.335, 1),
+    -webkit-transform 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+  z-index: 2;
+}
+.next-work-rifugio .next-work-rifugio-arrow svg {
+  width: 150px;
+  height: 70px;
+  fill: white;
+}
+.next-work-rifugio .next-work-rifugio svg path {
+  fill: #fff !important;
+  transition: all 0.3s ease;
+}
+.next-work-rifugio:focus .next-work-rifugio-lead,
+.next-work-rifugio:focus .next-work-rifugio-title,
+.next-work-rifugio:hover .next-work-rifugio-lead,
+.next-work-rifugio:hover .next-work-rifugio-title {
+  color: #ffffff;
+}
+.next-work-rifugio:focus:after,
+.next-work-rifugio:focus:before,
+.next-work-rifugio:hover:after,
+.next-work-rifugio:hover:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.next-work-rifugio:focus .next-work-rifugio-arrow,
+.next-work-rifugio:hover .next-work-rifugio-arrow {
+  transition-delay: 0.3s;
+  -webkit-transform: translate(20%, -50%);
+  transform: translate(20%, -50%);
+}
+.next-work-rifugio:focus .next-work-rifugio-arrow svg path,
+.next-work-rifugio:hover .next-work-rifugio-arrow svg path {
+  fill: #ffffff !important;
 }
