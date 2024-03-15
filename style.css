@@ -130,10 +130,13 @@ a {
   .img-mobile {
     padding-top: 10%;
   }
-  .next-work-arrow{
+  .next-work-arrow,
+  .next-work-ff-arrow,
+  .next-work-rifugio-arrow,
+  .next-work-home-arrow  {
     display: none;
   }
-  #next-work a,h5{
+  #next-work,#next-work-ff,#next-work-rifugio ,#next-work-home a,h5{
     text-align: center;
   }
 }
