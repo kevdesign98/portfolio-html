@@ -139,6 +139,9 @@ a {
   #next-work,#next-work-ff,#next-work-rifugio ,#next-work-home a,h5{
     text-align: center;
   }
+  .wave{
+    display: none !important;
+  }
 }
 
 .next-work {
