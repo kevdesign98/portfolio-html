@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin | Creative Developer Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style-test.css">
+</head>
+
+<body>
+
+    <div class="page-transition-overlay"></div>
+
+    <div class="content-wrapper">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand syne fw-bold fs-3" href="test-index.html">K<span class="text-primary">.</span></a>
+                <div class="ms-auto">
+                    <button class="btn btn-outline-light rounded-pill px-4 py-2 small fw-bold">CONTATTI</button>
+                </div>
+            </div>
+        </nav>
+
+        <header class="container hero-section">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="hero-title syne reveal">CODE<br><span class="text-primary opacity-75">MEETS</span>
+                        DESIGN.</h1>
+                    <p class="hero-sub reveal">Creative Developer specializzato in interfacce moderne. Costruisco il web
+                        un pixel alla volta.</p>
+                </div>
+            </div>
+        </header>
+
+        <section id="projects" class="container py-5">
+            <div class="bento-grid">
+                <a href="test-project-romiti.html" class="bento-item span-8 row-2">
+                    <div>
+                        <span class="text-primary fw-bold small uppercase">Progetto Evidenza</span>
+                        <h2 class="display-4 fw-bold syne mt-2">Romiti Vivai</h2>
+                    </div>
+                    <p class="text-secondary fs-5">Sito e-commerce per eccellenza vivaistica.</p>
+                </a>
+
+                <a href="#" class="bento-item span-4 bg-primary border-0 text-white">
+                    <i class="bi bi-github display-4"></i>
+                    <h4 class="syne fw-bold">GitHub</h4>
+                </a>
+
+                <a href="#" class="bento-item span-4">
+                    <h4 class="syne fw-bold">Weather App</h4>
+                    <p class="text-secondary small">API Real-time Integration.</p>
+                </a>
+
+                <a href="#" class="bento-item span-6">
+                    <h4 class="syne fw-bold">Dashboard Concept</h4>
+                    <p class="text-secondary small">Data Visualization UI.</p>
+                </a>
+
+                <a href="#" class="bento-item span-6 text-center justify-content-center border-dashed">
+                    <h4 class="syne fw-bold text-secondary opacity-50">Prossimo Progetto</h4>
+                </a>
+            </div>
+        </section>
+        <div style="height: 10vh;"></div>
+    </div>
+
+    <footer class="parallax-footer">
+        <div class="container text-center footer-reveal">
+            <h2 class="syne footer-cta">PRONTO A FARE IL<br><span class="text-primary">SALTO DI QUALITÀ?</span></h2>
+            <a href="mailto:kevdesign98@github.io" class="email-link d-block mt-4">kevdesign98@github.io</a>
+            <div class="mt-5 social-icons">
+                <a href="#" class="text-white mx-3 fs-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white mx-3 fs-2"><i class="bi bi-github"></i></a>
+            </div>
+            <p class="mt-5 text-secondary opacity-25 small font-monospace">© 2025 KEVIN DESIGN</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <script>
+        // Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // Footer Responsive
+        function handleFooter() {
+            const wrapper = document.querySelector('.content-wrapper');
+            const footer = document.querySelector('.parallax-footer');
+            if (window.innerWidth > 991) {
+                wrapper.style.marginBottom = footer.offsetHeight + "px";
+                footer.style.position = "fixed";
+            } else {
+                wrapper.style.marginBottom = "0px";
+                footer.style.position = "relative";
+            }
+        }
+        window.addEventListener('load', handleFooter);
+        window.addEventListener('resize', handleFooter);
+
+        // Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener('load', () => {
+            gsap.set(".page-transition-overlay", { translateY: "0%" });
+            const tl = gsap.timeline();
+            tl.to(".page-transition-overlay", { duration: 0.8, translateY: "-100%", ease: "power4.inOut", delay: 0.2 })
+                .from(".reveal", { duration: 1, y: 50, opacity: 0, stagger: 0.15, ease: "power3.out" }, "-=0.4")
+                .to(".hero-sub", { duration: 0.8, opacity: 1, y: -10 }, "-=0.6")
+                .to(".bento-item", { duration: 0.8, opacity: 1, y: 0, stagger: 0.1 }, "-=0.5");
+        });
+
+        // Page Exit
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+                if (link.hostname === window.location.hostname && !link.hash && link.target !== "_blank") {
+                    e.preventDefault();
+                    gsap.to(".page-transition-overlay", { duration: 0.6, translateY: "0%", ease: "power4.inOut", onComplete: () => { window.location.href = link.href; } });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
