@@ -336,3 +336,13 @@
           height: 500px;
       }
   }
+
+  .bento-item[style*="border-left"] {
+      transition: all 0.5s ease;
+  }
+
+  .bento-item[style*="border-left"]:hover {
+      background: rgba(221, 0, 49, 0.05) !important;
+      /* Un soffio di rosso Angular */
+      transform: scale(1.02);
+  }
