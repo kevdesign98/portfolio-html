@@ -1,85 +1,166 @@
 <!DOCTYPE html>
 <html lang="it" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Case study di Val-App: Web App sviluppata con Angular 18, Tailwind CSS e PrimeNG. Scopri come gestire API esterne con architetture moderne.">
+    <meta name="keywords"
+        content="Angular 18, TailwindCSS, PrimeNG, Sviluppatore Web, TypeScript, API Integration, Portfolio Sviluppatore">
     <title>Val-App | Angular Case Study</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style-test.css">
 </head>
+
 <body>
     <div class="page-transition-overlay"></div>
     <div class="content-wrapper">
         <nav class="navbar navbar-expand-lg fixed-top px-4">
             <div class="container">
-                <a class="navbar-brand syne fw-bold fs-3" href="test-index.html">K<span class="text-primary">.</span></a>
+                <a class="navbar-brand syne fw-bold fs-3" href="test-index.html">K<span
+                        class="text-primary">.</span></a>
             </div>
         </nav>
 
-       <main class="container project-hero">
-    <a href="test-index.html" class="text-secondary text-decoration-none fw-bold reveal"><i class="bi bi-arrow-left"></i> Home</a>
-    <h1 class="project-title syne reveal">VAL<br><span class="text-primary opacity-75">APP</span></h1>
-    
-    <div class="row g-3 mb-5">
-        <div class="col-md-8">
-            <div class="info-card h-100 reveal">
-                <span class="text-primary small fw-bold d-block mb-2">L'OBIETTIVO</span>
-                <p class="lead mb-0">Rinnovare l'immagine digitale di uno storico vivaio, creando un ponte tra la tradizione agricola e un'interfaccia utente moderna, veloce e facile da consultare per i clienti B2B e B2C.</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="info-card h-100 reveal">
-                <span class="text-primary small fw-bold d-block mb-2">RISULTATO</span>
-                <p class="small text-secondary mb-0">+40% di velocità di caricamento e un'interfaccia coerente su tutti i dispositivi mobile grazie all'uso sapiente di Bootstrap 5.</p>
-            </div>
-        </div>
-    </div>
+        <main class="container project-hero">
+            <a href="test-index.html" class="text-secondary text-decoration-none fw-bold reveal"><i
+                    class="bi bi-arrow-left"></i> Home</a>
+            <h1 class="project-title syne reveal">VAL<br><span class="opacity-75" style="color: #dd0031;">APP</span></h1>
 
-    <div class="project-img-box reveal-img mb-3">
-        <img src="img/pc.png"  alt="Desktop View Romiti Vivai">
-    </div>
-
-    <div class="row g-3 mb-5">
-        <div class="col-md-4">
-            <div class="project-img-box reveal-img h-100 mb-0">
-                <img src="img/romiti.png" alt="Mobile View 1">
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="project-img-box reveal-img h-100 mb-0">
-                <img src="img/desktop.png" alt="Mobile View 2">
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="info-card d-flex align-items-center justify-content-center bg-primary text-white border-0 reveal">
-                <div class="text-center">
-                    <i class="bi bi-phone fs-1 mb-2"></i>
-                    <p class="fw-bold mb-0">Mobile First<br>Approach</p>
+            <div class="row g-3 mb-5">
+                <div class="col-md-8">
+                    <div class="info-card h-100 reveal">
+                        <span class="text-primary small fw-bold d-block mb-2 text-uppercase">L'obbiettivo</span>
+                        <p class="lead mb-0">
+                            Come sviluppatore junior, volevo mettermi alla prova con un framework solido come Angular.
+                            La sfida è stata capire come far comunicare correttamente l'applicazione con delle API
+                            esterne e gestire la visualizzazione dei dati in modo ordinato ed efficiente."</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card h-100 reveal">
+                        <span class="text-primary small fw-bold d-block mb-2 text-uppercase">Soluzione</span>
+                        <p class="small text-white text-secondary mb-0">Ho scelto Angular 18 per iniziare subito con le ultime
+                            convenzioni del framework (come i componenti standalone).<br> Per la parte visiva, ho preferito
+                            Tailwind CSS per la velocità di styling e PrimeNG per avere componenti già pronti e
+                            professionali, concentrandomi così maggiormente sulla logica di recupero dei dati (HTTP
+                            Client).</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="row py-5">
-        <div class="col-lg-6 reveal">
-            <h3 class="syne mb-4">Sviluppo & Performance</h3>
-            <p class="text-secondary">Il sito è stato sviluppato con un approccio modulare. Ho utilizzato SASS per gestire la palette colori ispirata alla natura e GSAP per dare quel senso di crescita fluida agli elementi durante lo scrolling.</p>
-        </div>
-        <div class="col-lg-6 reveal">
-            <h3 class="syne mb-4">Tech Stack</h3>
-            <div class="d-flex flex-wrap gap-2">
-                <span class="badge rounded-pill bg-white text-dark px-3 py-2">Bootstrap 5</span>
-                <span class="badge rounded-pill border border-secondary px-3 py-2">GSAP</span>
-                <span class="badge rounded-pill border border-secondary px-3 py-2">SASS</span>
-                <span class="badge rounded-pill border border-secondary px-3 py-2">JavaScript ES6</span>
+            <div class="project-img-box reveal-img mb-3">
+                <img src="img/pc.png" alt="Desktop View Romiti Vivai">
             </div>
-        </div>
-    </div>
-</main>
+
+            <div class="row g-3 mb-5">
+                <div class="col-md-4">
+                    <div class="project-img-box reveal-img h-100 mb-0">
+                        <img src="img/romiti.png" alt="Mobile View 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-img-box reveal-img h-100 mb-0">
+                        <img src="img/desktop.png" alt="Mobile View 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="info-card d-flex align-items-center justify-content-center bg-primary text-white border-0 reveal">
+                        <div class="text-center">
+                            <i class="bi bi-phone fs-1 mb-2"></i>
+                            <p class="fw-bold mb-0">Mobile First<br>Approach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-5">
+                <div class="col-md-8">
+                    <div class="info-card reveal">
+                        <h3 class="syne mb-4">Sviluppo & Performance</h3>
+                        <p class="text-secondary">Nello sviluppo di Val-App ho dato priorità all'organizzazione del
+                            codice tramite i componenti standalone di Angular 18, rendendo l'app modulare e facile da
+                            scalare. Ho utilizzato Tailwind CSS per mantenere il bundle finale ridotto e PrimeNG per
+                            avere componenti UI già ottimizzati. Mi sono divertito a gestire le chiamate alle API
+                            esterne cercando di rendere l'esperienza utente il più fluida possibile, gestendo i
+                            caricamenti in modo che l'interfaccia non risulti mai 'bloccata' per chi la usa</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card reveal">
+                        <h3 class="syne mb-4">Tech Stack</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill bg-white text-dark px-3 py-2">TailwindCSS</span>
+                            <span class="badge rounded-pill border border-secondary px-3 py-2">HTML & CSS</span>
+                            <span class="badge rounded-pill border border-secondary px-3 py-2">Typescript</span>
+                            <span class="badge rounded-pill border border-secondary px-3 py-2">PrimeNG</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+<!-- 
+        <div class="row mt-5 pt-4 reveal">
+            <div class="col-lg-6">
+                <h3 class="syne fw-bold mb-3">Sviluppo & Performance</h3>
+                <p class="text-secondary">
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="info-card h-100 d-flex align-items-center">
+                    <div class="row w-100 text-center">
+                        <div class="col-4">
+                            <h4 class="text-primary fw-bold mb-0">90+</h4>
+                            <span class="small text-secondary">Performance</span>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="text-primary fw-bold mb-0">100%</h4>
+                            <span class="small text-secondary">Responsive</span>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="text-primary fw-bold mb-0">A+</h4>
+                            <span class="small text-secondary">Code Quality</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <div style="height: 10vh;"></div>
+
+
+
+        <section class="next-project-section py-5">
+            <div class="container">
+                <hr class="opacity-10 mb-5">
+                <div class="row align-items-center g-4 reveal">
+                    <div class="col-md-6">
+                        <span class="text-primary fw-bold small text-uppercase mb-2 d-block">Prossimo Caso Studio</span>
+                        <h2 class="syne display-3 fw-bold"><span style="color: #dd0031;">TCO</span> Spedizioni</h2>
+                        <p class="text-secondary lead">Dalla logica complessa all'interfaccia reattiva: guarda come ho
+                            gestito dati real-time con Angular 18.</p>
+                        <a href="test-project-valapp.html"
+                            class="btn btn-outline-primary rounded-pill px-4 py-2 mt-3 fw-bold transition-link">
+                            Esplora Progetto <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="next-project-preview">
+                            <img src="val-app-preview.jpg" class="img-fluid rounded-4 shadow-lg" alt="Next Project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer class="parallax-footer">
@@ -114,9 +195,9 @@
             gsap.set(".page-transition-overlay", { translateY: "0%" });
             const tl = gsap.timeline();
             tl.to(".page-transition-overlay", { duration: 0.8, translateY: "-100%", ease: "power4.inOut", delay: 0.2 })
-              .from(".syne", { duration: 1, y: 30, opacity: 0 })
-              .to(".info-card", { duration: 0.5, opacity: 1, stagger: 0.1 }, "-=0.5")
-              .to(".reveal-img", { duration: 1, opacity: 1, y: 0 }, "-=0.3");
+                .from(".syne", { duration: 1, y: 30, opacity: 0 })
+                .to(".info-card", { duration: 0.5, opacity: 1, stagger: 0.1 }, "-=0.5")
+                .to(".reveal-img", { duration: 1, opacity: 1, y: 0 }, "-=0.3");
         });
 
         document.querySelectorAll('a').forEach(link => {
@@ -129,4 +210,5 @@
         });
     </script>
 </body>
+
 </html>
