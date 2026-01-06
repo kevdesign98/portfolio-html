@@ -365,3 +365,54 @@
   .next-project-preview:hover img {
       filter: brightness(1.1);
   }
+
+  .project-navigation a:hover .bi-arrow-right {
+      transform: translateX(5px);
+      transition: transform 0.3s ease;
+  }
+
+  .project-navigation a:hover .bi-arrow-left {
+      transform: translateX(-5px);
+      transition: transform 0.3s ease;
+  }
+
+  /* Animazione Rotazione Cerchio */
+  .floating-circle {
+      transform-origin: center;
+      animation: rotateLoop 10s linear infinite;
+  }
+
+  /* Animazione Pulsazione Quadrato */
+  .floating-rect {
+      transform-origin: center;
+      animation: pulseLoop 4s ease-in-out infinite;
+  }
+
+  @keyframes rotateLoop {
+      from {
+          transform: rotate(0deg);
+      }
+
+      to {
+          transform: rotate(360deg);
+      }
+  }
+
+  @keyframes pulseLoop {
+
+      0%,
+      100% {
+          transform: scale(1) rotate(0deg);
+          opacity: 0.8;
+      }
+
+      50% {
+          transform: scale(1.2) rotate(45deg);
+          opacity: 0.3;
+      }
+  }
+
+  /* Effetto Glow sull'accento */
+  .hero-svg-accent {
+      filter: drop-shadow(0 0 8px rgba(0, 122, 255, 0.5));
+  }
