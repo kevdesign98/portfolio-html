@@ -37,7 +37,9 @@
                         <p class="lead mb-0">Un progetto di restyling ambizioso per uno dei leader mondiali del
                             publishing. Mi sono occupato di tradurre la nuova identità visiva del brand in
                             un'interfaccia web pulita, solida e orientata alla lead generation.</p>
+
                     </div>
+
                 </div>
                 <div class="col-md-4">
                     <div class="info-card h-100 reveal">
@@ -45,6 +47,12 @@
                         <p class="small text-secondary mb-0">Un incremento della leggibilità dei contenuti e una
                             navigazione più fluida tra le soluzioni offerte, posizionando il sito come un punto di
                             riferimento autorevole nel settore tecnologico.</p>
+                        <div class="mt-4">
+                            <a href="https://www.eidosmedia.com/" target="_blank"
+                                class="btn btn-outline-light rounded-pill px-4 py-2 tech-style-btn shadow-glow">
+                                <i class="bi bi-rocket-takeoff me-2">LAUNCH PROJECT</i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,10 +93,10 @@
                 <div class="col-lg-6 reveal">
                     <h3 class="syne mb-4">Tech Stack</h3>
                     <div class="d-flex flex-wrap gap-2">
-                        <span class="badge rounded-pill bg-white text-dark px-3 py-2">Bootstrap 5</span>
-                        <span class="badge rounded-pill border border-secondary px-3 py-2">GSAP</span>
-                        <span class="badge rounded-pill border border-secondary px-3 py-2">SASS</span>
-                        <span class="badge rounded-pill border border-secondary px-3 py-2">JavaScript ES6</span>
+                        <span class="badge rounded-pill bg-white text-dark px-3 py-2">CMS Swing</span>
+                        <span class="badge rounded-pill border border-secondary px-3 py-2">Cobalt</span>
+                        <span class="badge rounded-pill border border-secondary px-3 py-2">Méthode</span>
+                        <span class="badge rounded-pill border border-secondary px-3 py-2">JavaScript,Swiper</span>
                     </div>
                 </div>
             </div>
@@ -118,7 +126,7 @@
                             <span class="text-primary fw-bold small text-uppercase mb-2">
                                 Successivo <i class="bi bi-arrow-right ms-2"></i>
                             </span>
-                            <a href="test-project-eidos-ff.html" class="text-decoration-none text-white group">
+                            <a href="test-project-eidosmedia-ff.html" class="text-decoration-none text-white group">
                                 <h3 class="syne fw-bold mb-2 text-uppercase">Eidosmedia ff</h3>
                                 <p class="text-secondary small mb-3">Landing page & Web Design</p>
                             </a>
@@ -132,7 +140,7 @@
     <footer class="parallax-footer">
         <div class="container text-center">
             <h2 class="syne footer-cta">PRONTO A FARE IL<br><span class="text-primary">SALTO DI QUALITÀ?</span></h2>
-            <a href="mailto:kevdesign98@github.io" class="email-link d-block mt-4">kevdesign98@github.io</a>
+            <a href="mailto:kevin.cooray98@gmail.com" class="email-link d-block mt-4">kevin.cooray98@gmail.com</a>
         </div>
     </footer>
 
@@ -173,6 +181,15 @@
                     gsap.to(".page-transition-overlay", { duration: 0.6, translateY: "0%", ease: "power4.inOut", onComplete: () => { window.location.href = link.href; } });
                 }
             });
+        });
+
+        gsap.from(".visit-btn", {
+            scrollTrigger: ".visit-btn", // Si attiva quando l'utente arriva a vederlo
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            delay: 0.5
         });
     </script>
 </body>
